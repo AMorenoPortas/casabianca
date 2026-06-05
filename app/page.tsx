@@ -180,13 +180,12 @@ export default function CasabiancaLanding() {
             alt="Casabianca"
             className="mx-auto mb-8 h-32 w-auto mix-blend-multiply"
           />
-          <p className="mb-6 text-xs uppercase tracking-[0.4em] text-[#A6896F]">Don Torcuato · Diseño de interiores</p>
+          <p className="mb-6 text-xs uppercase tracking-[0.4em] text-[#A6896F]">Don Torcuato · Blanqueria & Accesorios</p>
           <h1 className="font-display text-5xl leading-[1.05] md:text-7xl">
             Transformamos tu casa<br />en el hogar que soñás
           </h1>
           <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-[#5a5247]">
-            Asesoramiento personalizado en ropa blanca y diseño de interiores. Seleccionamos géneros y
-            texturas que no solo visten ambientes: crean momentos de bienestar.
+            Desde un juego de sábanas hasta un articulo de diseño tenemos el detalle perfecto para renovar tu energía y tu hogar.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a href="#productos" className="rounded-full bg-[#2E2A24] px-8 py-3 text-[#F7F3EC] transition-transform hover:-translate-y-0.5">
@@ -443,7 +442,7 @@ export default function CasabiancaLanding() {
       {/* ───────── FOOTER ───────── */}
       <footer className="bg-[#2E2A24] py-10 text-center text-[#cabfae]">
         <p className="font-display text-2xl uppercase tracking-[0.18em] text-[#F7F3EC]">Casabianca</p>
-        <p className="mt-2 text-sm">Don Torcuato · Diseño de interiores y ropa blanca</p>
+        <p className="mt-2 text-sm">Don Torcuato · Blanqueria & Accesorios</p>
       </footer>
     </main>
   );
