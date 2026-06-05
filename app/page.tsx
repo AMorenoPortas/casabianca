@@ -196,6 +196,14 @@ export default function CasabiancaLanding() {
               Guía de telas
             </a>
           </div>
+          <div className="mt-4 flex justify-center">
+            <a
+              href="/filosofia"
+              className="rounded-full border border-[#D8CCB6] px-8 py-3 text-sm tracking-wide text-[#5a5247] transition-colors hover:border-[#A6896F] hover:text-[#A6896F]"
+            >
+              Filosofía Casabianca
+            </a>
+          </div>
         </div>
         <div className="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-[#EBE3D5] blur-3xl" />
         <div className="pointer-events-none absolute -left-24 bottom-0 h-64 w-64 rounded-full bg-[#E5E2D2] blur-3xl" />
