@@ -157,11 +157,12 @@ export default function CasabiancaLanding() {
       <header className="sticky top-0 z-50 border-b border-[#E0D6C4] bg-[#F7F3EC]">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <nav className="hidden items-center gap-8 text-sm tracking-wide md:flex">
-            <a href="#nosotros" className="transition-colors hover:text-[#A6896F]">Nosotros</a>
+           <a href="#nosotros" className="transition-colors hover:text-[#A6896F]">Nosotros</a>
             <a href="#productos" className="transition-colors hover:text-[#A6896F]">Productos</a>
             <a href="#faq" className="transition-colors hover:text-[#A6896F]">Guía</a>
             <a href="#medidas" className="transition-colors hover:text-[#A6896F]">Medidas</a>
             <a href="#test" className="transition-colors hover:text-[#A6896F]">Test</a>
+            <a href="/devoluciones" className="transition-colors hover:text-[#A6896F]">Devoluciones</a>
           </nav>
           <a
             href="https://wa.me/541141952834"

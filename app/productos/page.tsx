@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 
 const CATEGORIAS = [
@@ -227,18 +230,74 @@ const CATEGORIAS = [
 ];
 
 export default function ProductosPage() {
+  const [lightbox, setLightbox] = useState<{ imgs: string[]; idx: number } | null>(null);
+
+  const abrirLightbox = (imgs: string[], idx: number) => setLightbox({ imgs, idx });
+  const cerrarLightbox = () => setLightbox(null);
+  const anterior = () => setLightbox((l) => l ? { ...l, idx: (l.idx - 1 + l.imgs.length) % l.imgs.length } : null);
+  const siguiente = () => setLightbox((l) => l ? { ...l, idx: (l.idx + 1) % l.imgs.length } : null);
+
   return (
     <main className="min-h-screen bg-[#F7F3EC] text-[#2E2A24]">
 
+      {/* ───────── LIGHTBOX ───────── */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          onClick={cerrarLightbox}
+        >
+          {/* imagen */}
+          <img
+            src={lightbox.imgs[lightbox.idx]}
+            alt=""
+            className="max-h-[90vh] max-w-[90vw] rounded-2xl object-contain shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+
+          {/* cerrar */}
+          <button
+            onClick={cerrarLightbox}
+            className="absolute top-5 right-5 text-white text-3xl leading-none hover:text-[#A6896F] transition-colors"
+          >
+            ✕
+          </button>
+
+          {/* anterior */}
+          {lightbox.imgs.length > 1 && (
+            <button
+              onClick={(e) => { e.stopPropagation(); anterior(); }}
+              className="absolute left-5 text-white text-4xl leading-none hover:text-[#A6896F] transition-colors"
+            >
+              ‹
+            </button>
+          )}
+
+          {/* siguiente */}
+          {lightbox.imgs.length > 1 && (
+            <button
+              onClick={(e) => { e.stopPropagation(); siguiente(); }}
+              className="absolute right-5 text-white text-4xl leading-none hover:text-[#A6896F] transition-colors"
+            >
+              ›
+            </button>
+          )}
+
+          {/* contador */}
+          <p className="absolute bottom-5 text-white/60 text-sm">
+            {lightbox.idx + 1} / {lightbox.imgs.length}
+          </p>
+        </div>
+      )}
+
       {/* ───────── HEADER ───────── */}
-      <header className="sticky top-0 z-50 border-b border-[#E0D6C4] bg-[#F7F3EC]">
+      <header className="sticky top-0 z-40 border-b border-[#E0D6C4] bg-[#F7F3EC]">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <div className="w-24" />
           <Link href="/">
             <img
               src="/productos/logo/Caasabianca.jpeg"
               alt="Casabianca"
-              className="h-20 w-auto mix-blend-multiply"
+              className="h-25 w-auto mix-blend-multiply"
             />
           </Link>
           <a
@@ -259,7 +318,6 @@ export default function ProductosPage() {
         <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-[#5a5247]">
           Explorá cada categoría y encontrá el detalle perfecto para tu hogar.
         </p>
-        {/* navegación por categorías */}
         <div className="mt-8 flex flex-wrap justify-center gap-2">
           {CATEGORIAS.map((c) => (
             <a
@@ -281,7 +339,6 @@ export default function ProductosPage() {
               <p className="text-xs uppercase tracking-[0.4em] text-[#A6896F]">Categoría</p>
               <h2 className="mt-2 font-display text-3xl md:text-4xl">{cat.nombre}</h2>
             </div>
-
             <div className="space-y-16">
               {cat.productos.map((prod) => (
                 <div key={prod.nombre}>
@@ -291,16 +348,17 @@ export default function ProductosPage() {
                   </div>
                   <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
                     {prod.imgs.map((img, idx) => (
-                      <div
+                      <button
                         key={idx}
-                        className="group overflow-hidden rounded-2xl border border-[#E0D6C4] bg-[#EBE3D5]"
+                        onClick={() => abrirLightbox(prod.imgs, idx)}
+                        className="group overflow-hidden rounded-2xl border border-[#E0D6C4] bg-[#EBE3D5] cursor-zoom-in"
                       >
                         <img
                           src={img}
                           alt={`${prod.nombre} ${idx + 1}`}
                           className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                         />
-                      </div>
+                      </button>
                     ))}
                   </div>
                 </div>
@@ -314,7 +372,7 @@ export default function ProductosPage() {
       <section className="border-t border-[#E0D6C4] bg-[#EFE8DB] px-6 py-20 text-center">
         <h2 className="font-display text-3xl md:text-4xl">¿Querés saber más sobre algún producto?</h2>
         <p className="mx-auto mt-4 max-w-md text-lg text-[#5a5247]">
-          Escribinos y te asesoramos sin compromiso.
+          Escribinos y te asesoramos.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
