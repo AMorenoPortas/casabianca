@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Button from "./components/button";
 
 const PRODUCTOS = [
   { nombre: "Sábanas King · 300 hilos", detalle: "Percal suave y respirable", img: "/productos/sabana-king-300h/Screenshot_20260604_101618_WhatsApp.jpg" },
@@ -14,11 +15,11 @@ const PRODUCTOS = [
 const FAQS = [
   {
     q: "¿El poliéster es malo? ¿Y qué es la microfibra?",
-    a: "El poliéster no es “malo”: es una fibra sintética muy resistente, durable y de fácil mantenimiento. La microfibra es un poliéster ultrafino, suave y liviano, ideal para sábanas, acolchados y toallas de secado rápido. Tiene ventajas como el secado rápido, menor arruga y practicidad para el uso diario. Su conveniencia depende del destino: en un mantel es ideal porque repele manchas, pero en una sábana puede resultar menos respirable y dar más calor.",
+    a: 'El poliéster no es "malo": es una fibra sintética muy resistente, durable y de fácil mantenimiento. La microfibra es un poliéster ultrafino, suave y liviano, ideal para sábanas, acolchados y toallas de secado rápido. Tiene ventajas como el secado rápido, menor arruga y practicidad para el uso diario. Su conveniencia depende del destino: en un mantel es ideal porque repele manchas, pero en una sábana puede resultar menos respirable y dar más calor.',
   },
   {
-    q: "“1600 hilos” y “Cotton Touch”, ¿es publicidad engañosa?",
-    a: "Puede prestarse a confusión. El número de hilos no siempre define la calidad real: también influyen la calidad del hilo, el tipo de tejido y la composición de la tela. Muchas veces son “1600 hilos” de poliéster con frases como “textura algodonosa”. “Cotton Touch” significa “tacto algodón”: suele ser una tela sintética o mezcla que imita la suavidad del algodón, pero no es algodón puro.",
+    q: '"1600 hilos" y "Cotton Touch", ¿es publicidad engañosa?',
+    a: 'Puede prestarse a confusión. El número de hilos no siempre define la calidad real: también influyen la calidad del hilo, el tipo de tejido y la composición de la tela. Muchas veces son "1600 hilos" de poliéster con frases como "textura algodonosa". "Cotton Touch" significa "tacto algodón": suele ser una tela sintética o mezcla que imita la suavidad del algodón, pero no es algodón puro.',
   },
   {
     q: "¿Cuál es la diferencia en cortinados Black Out?",
@@ -30,7 +31,7 @@ const FAQS = [
   },
   {
     q: "¿Las medidas de los envoltorios son correctas?",
-    a: "Sí, aunque puede haber una pequeña variación por el proceso de confección y terminación textil. En algunos productos las medidas pueden variar algunos centímetros según el lavado, el matelaseado o el tipo de tela. Además, denominaciones como “Twin”, “Queen” o “King” no siempre corresponden a una medida estándar universal. Por eso conviene mirar la medida real del producto y hacer tus propios cálculos.",
+    a: 'Sí, aunque puede haber una pequeña variación por el proceso de confección y terminación textil. En algunos productos las medidas pueden variar algunos centímetros según el lavado, el matelaseado o el tipo de tela. Además, denominaciones como "Twin", "Queen" o "King" no siempre corresponden a una medida estándar universal. Por eso conviene mirar la medida real del producto y hacer tus propios cálculos.',
   },
   {
     q: "¿Percal o satén?",
@@ -151,7 +152,8 @@ export default function CasabiancaLanding() {
 
   return (
     <main className="min-h-screen bg-[#F7F3EC] text-[#2E2A24] selection:bg-[#A6896F] selection:text-[#F7F3EC]">
-      {/* ───────── HEADER (logo centrado) ───────── */}
+
+      {/* ───────── HEADER ───────── */}
       <header className="sticky top-0 z-50 border-b border-[#E0D6C4] bg-[#F7F3EC]">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <nav className="hidden items-center gap-8 text-sm tracking-wide md:flex">
@@ -185,7 +187,7 @@ export default function CasabiancaLanding() {
             Transformamos tu casa<br />en el hogar que soñás
           </h1>
           <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-[#5a5247]">
-            Desde un juego de sábanas hasta un articulo de diseño tenemos el detalle perfecto para renovar tu energía y tu hogar.
+            Desde un juego de sábanas hasta un artículo de diseño tenemos el detalle perfecto para renovar tu energía y tu hogar.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a href="#productos" className="rounded-full bg-[#2E2A24] px-8 py-3 text-[#F7F3EC] transition-transform hover:-translate-y-0.5">
@@ -208,7 +210,7 @@ export default function CasabiancaLanding() {
         <div className="pointer-events-none absolute -left-24 bottom-0 h-64 w-64 rounded-full bg-[#E5E2D2] blur-3xl" />
       </section>
 
-      {/* ───────── ¿Y SI LO PENSAMOS JUNT@S? ───────── */}
+      {/* ───────── NOSOTROS ───────── */}
       <section id="nosotros" className="border-y border-[#E0D6C4] bg-[#EFE8DB]">
         <div className="mx-auto max-w-6xl px-6 py-24">
           <h2 className="font-display text-4xl md:text-5xl">¿Y si lo pensamos junt@s?</h2>
@@ -234,11 +236,15 @@ export default function CasabiancaLanding() {
 
       {/* ───────── PRODUCTOS DESTACADOS ───────── */}
       <section id="productos" className="mx-auto max-w-6xl px-6 py-24">
-        <div className="flex items-end justify-between">
-          <div>
-            <p className="text-xs uppercase tracking-[0.4em] text-[#A6896F]">Selección</p>
-            <h2 className="mt-3 font-display text-4xl md:text-5xl">Productos destacados</h2>
-          </div>
+        <div>
+          <p className="text-xs uppercase tracking-[0.4em] text-[#A6896F]">Selección</p>
+          <h2 className="mt-3 font-display text-4xl md:text-5xl">Productos destacados</h2>
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <Button href="/productos" variant="primary">
+            Ver todos los productos →
+          </Button>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {PRODUCTOS.map((p) => (
@@ -257,7 +263,7 @@ export default function CasabiancaLanding() {
         </div>
       </section>
 
-      {/* ───────── PREGUNTAS FRECUENTES ───────── */}
+      {/* ───────── FAQ ───────── */}
       <section id="faq" className="border-y border-[#E0D6C4] bg-[#EFE8DB]">
         <div className="mx-auto max-w-5xl px-6 py-24">
           <p className="text-xs uppercase tracking-[0.4em] text-[#A6896F]">Guía de consulta</p>
@@ -267,12 +273,10 @@ export default function CasabiancaLanding() {
             consulta rápida: mi guía sobre la calidad de los hilados, tips para combinar texturas y una
             tabla de medidas exacta para que tus sábanas y acolchados queden impecables.
           </p>
-
-          {/* Guía de telas */}
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {[
               { t: "Algodón Premium", d: "La fibra natural por excelencia: suave, respirable y se adapta a la temperatura del cuerpo. Ideal para frescura todo el año." },
-              { t: "Percal (180 a 400 hilos)", d: "El “hilo” son los hilos por pulgada cuadrada. A más cantidad, tejido más cerrado y sedoso. 400 hilos es el estándar de los mejores hoteles." },
+              { t: "Percal (180 a 400 hilos)", d: 'El "hilo" son los hilos por pulgada cuadrada. A más cantidad, tejido más cerrado y sedoso. 400 hilos es el estándar de los mejores hoteles.' },
               { t: "Lino", d: "El género más noble y sofisticado. Textura rústica, sumamente durable y mejora con cada lavado." },
             ].map((m) => (
               <div key={m.t} className="rounded-2xl border border-[#D8CCB6] bg-[#F7F3EC] p-6">
@@ -281,8 +285,6 @@ export default function CasabiancaLanding() {
               </div>
             ))}
           </div>
-
-          {/* Acordeón */}
           <div className="mt-12 divide-y divide-[#D8CCB6] overflow-hidden rounded-2xl border border-[#D8CCB6] bg-[#F7F3EC]">
             {FAQS.map((f, i) => {
               const abierta = faqAbierta === i;
@@ -339,13 +341,12 @@ export default function CasabiancaLanding() {
         </p>
       </section>
 
-      {/* ───────── TEST DE ESTILO ───────── */}
+      {/* ───────── TEST ───────── */}
       <section id="test" className="border-y border-[#E0D6C4] bg-[#2E2A24] text-[#F7F3EC]">
         <div className="mx-auto max-w-3xl px-6 py-24">
           <p className="text-center text-xs uppercase tracking-[0.4em] text-[#A6896F]">Test de estilo</p>
           <h2 className="mt-3 text-center font-display text-4xl md:text-5xl">¿Cuál es tu esencia Casabianca?</h2>
           <p className="mt-5 text-center text-lg text-[#cabfae]">Respondé estas 3 preguntas y descubrí tu set ideal.</p>
-
           {!resultado ? (
             <div className="mt-14 space-y-10">
               {TEST.map((pregunta, i) => (
@@ -444,6 +445,7 @@ export default function CasabiancaLanding() {
         <p className="font-display text-2xl uppercase tracking-[0.18em] text-[#F7F3EC]">Casabianca</p>
         <p className="mt-2 text-sm">Don Torcuato · Blanqueria & Accesorios</p>
       </footer>
+
     </main>
   );
 }
