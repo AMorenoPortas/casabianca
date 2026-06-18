@@ -162,7 +162,7 @@ export default function CasabiancaLanding() {
             <a href="#faq" className="transition-colors hover:text-[#A6896F]">Guía</a>
             <a href="#medidas" className="transition-colors hover:text-[#A6896F]">Medidas</a>
             <a href="#test" className="transition-colors hover:text-[#A6896F]">Test</a>
-            <a href="/devoluciones" className="transition-colors hover:text-[#A6896F]">Devoluciones</a>
+            <a href="/devoluciones" className="transition-colors hover:text-[#A6896F]">Política de devoluciones</a>
           </nav>
           <a
             href="https://wa.me/541141952834"
