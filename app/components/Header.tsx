@@ -26,14 +26,11 @@ export default function Header({ variant = "centered" }: HeaderProps) {
     return (
       <header className="sticky top-0 z-50" style={{ borderBottom: "1px solid var(--border-color)", background: "var(--background)" }}>
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          {/* NAV DESKTOP */}
           <nav className="hidden items-center gap-8 text-sm tracking-wide md:flex" style={{ color: "var(--muted)" }}>
             {NAV_LINKS.map((l) => (
               <Link key={l.href} href={l.href} className="transition-colors hover:text-[#A6896F]">{l.label}</Link>
             ))}
           </nav>
-
-          {/* DERECHA */}
           <div className="flex items-center gap-3">
             <ThemeToggle />
             <a href="https://wa.me/541141952834" target="_blank" rel="noreferrer"
@@ -41,7 +38,6 @@ export default function Header({ variant = "centered" }: HeaderProps) {
               style={{ border: "1px solid var(--foreground)", color: "var(--foreground)" }}>
               Escribinos
             </a>
-            {/* Hamburguesa solo mobile */}
             <button onClick={() => setMenuAbierto(!menuAbierto)}
               className="flex items-center justify-center rounded-full p-2 transition-colors md:hidden"
               style={{ color: "var(--foreground)" }} aria-label="Menú">
@@ -49,8 +45,6 @@ export default function Header({ variant = "centered" }: HeaderProps) {
             </button>
           </div>
         </div>
-
-        {/* MENÚ MOBILE */}
         {menuAbierto && (
           <div className="md:hidden" style={{ borderTop: "1px solid var(--border-color)", background: "var(--background)" }}>
             <nav className="flex flex-col px-6 py-4 gap-1">
@@ -69,24 +63,37 @@ export default function Header({ variant = "centered" }: HeaderProps) {
   }
 
   // variant === "centered"
+  // Mobile: logo a la izquierda + botones a la derecha (sin columna vacía)
+  // Desktop: grilla de 3 col con logo centrado
   return (
     <header className="sticky top-0 z-50" style={{ borderBottom: "1px solid var(--border-color)", background: "var(--background)" }}>
-      <div className="mx-auto grid max-w-6xl grid-cols-3 items-center px-6 py-4">
+      {/* MOBILE */}
+      <div className="flex items-center justify-between px-4 py-3 md:hidden">
+        <Link href="/">
+          <img src="/productos/logo/Caasabianca.jpeg" alt="Casabianca" className="h-10 w-auto mix-blend-multiply" />
+        </Link>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <a href="https://wa.me/541141952834" target="_blank" rel="noreferrer"
+            className="rounded-full px-3 py-1.5 text-xs tracking-wide transition-all"
+            style={{ border: "1px solid var(--foreground)", color: "var(--foreground)" }}>
+            Escribinos
+          </a>
+        </div>
+      </div>
+
+      {/* DESKTOP */}
+      <div className="mx-auto hidden max-w-6xl grid-cols-3 items-center px-6 py-4 md:grid">
         <div />
         <div className="flex justify-center">
           <Link href="/">
-            <img src="/productos/logo/Caasabianca.jpeg" alt="Casabianca" className="h-12 w-auto mix-blend-multiply md:h-20" />
+            <img src="/productos/logo/Caasabianca.jpeg" alt="Casabianca" className="h-20 w-auto mix-blend-multiply" />
           </Link>
         </div>
         <div className="flex items-center justify-end gap-3">
           <ThemeToggle />
           <a href="https://wa.me/541141952834" target="_blank" rel="noreferrer"
-            className="hidden rounded-full px-5 py-2 text-sm tracking-wide transition-all sm:inline-block"
-            style={{ border: "1px solid var(--foreground)", color: "var(--foreground)" }}>
-            Escribinos
-          </a>
-          <a href="https://wa.me/541141952834" target="_blank" rel="noreferrer"
-            className="sm:hidden rounded-full px-3 py-2 text-xs tracking-wide transition-all"
+            className="rounded-full px-5 py-2 text-sm tracking-wide transition-all"
             style={{ border: "1px solid var(--foreground)", color: "var(--foreground)" }}>
             Escribinos
           </a>
