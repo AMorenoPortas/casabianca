@@ -14,13 +14,13 @@ const PRODUCTOS = [
 ];
 
 const FOTOS_DISENO = [
-  "/productos/diseño-interiores/IMG-20260610-WA0080.jpg",
-  "/productos/diseño-interiores/IMG-20260610-WA0081.jpg",
-  "/productos/diseño-interiores/IMG-20260610-WA0082.jpg",
-  "/productos/diseño-interiores/IMG-20260610-WA0083.jpg",
-  "/productos/diseño-interiores/IMG-20260610-WA0084.jpg",
-  "/productos/diseño-interiores/IMG-20260610-WA0085.jpg",
-  "/productos/diseño-interiores/IMG-20260610-WA0086.jpg",
+  "/productos/diseno-interiores/IMG-20260610-WA0080.jpg",
+  "/productos/diseno-interiores/IMG-20260610-WA0081.jpg",
+  "/productos/diseno-interiores/IMG-20260610-WA0082.jpg",
+  "/productos/diseno-interiores/IMG-20260610-WA0083.jpg",
+  "/productos/diseno-interiores/IMG-20260610-WA0084.jpg",
+  "/productos/diseno-interiores/IMG-20260610-WA0085.jpg",
+  "/productos/diseno-interiores/IMG-20260610-WA0086.jpg",
 ];
 
 const FAQS = [
