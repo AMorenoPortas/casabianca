@@ -75,7 +75,7 @@ export default function Header({ variant = "centered" }: HeaderProps) {
         <div />
         <div className="flex justify-center">
           <Link href="/">
-            <img src="/productos/logo/Caasabianca.jpeg" alt="Casabianca" className="h-20 w-auto mix-blend-multiply" />
+            <img src="/productos/logo/Caasabianca.jpeg" alt="Casabianca" className="h-12 w-auto mix-blend-multiply md:h-20" />
           </Link>
         </div>
         <div className="flex items-center justify-end gap-3">
