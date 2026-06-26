@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Header from "../components/Header";
 
 const CATEGORIAS = [
   {
@@ -238,104 +239,49 @@ export default function ProductosPage() {
   const siguiente = () => setLightbox((l) => l ? { ...l, idx: (l.idx + 1) % l.imgs.length } : null);
 
   return (
-    <main className="min-h-screen bg-[#F7F3EC] text-[#2E2A24]">
+    <main className="min-h-screen" style={{ background: "var(--background)", color: "var(--foreground)" }}>
 
-      {/* ───────── LIGHTBOX ───────── */}
+      {/* LIGHTBOX */}
       {lightbox && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
-          onClick={cerrarLightbox}
-        >
-          {/* imagen */}
-          <img
-            src={lightbox.imgs[lightbox.idx]}
-            alt=""
-            className="max-h-[90vh] max-w-[90vw] rounded-2xl object-contain shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          />
-
-          {/* cerrar */}
-          <button
-            onClick={cerrarLightbox}
-            className="absolute top-5 right-5 text-white text-3xl leading-none hover:text-[#A6896F] transition-colors"
-          >
-            ✕
-          </button>
-
-          {/* anterior */}
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm" onClick={cerrarLightbox}>
+          <img src={lightbox.imgs[lightbox.idx]} alt="" className="max-h-[90vh] max-w-[90vw] rounded-2xl object-contain shadow-2xl" onClick={(e) => e.stopPropagation()} />
+          <button onClick={cerrarLightbox} className="absolute top-5 right-5 text-white text-3xl leading-none hover:text-[#A6896F] transition-colors">✕</button>
           {lightbox.imgs.length > 1 && (
-            <button
-              onClick={(e) => { e.stopPropagation(); anterior(); }}
-              className="absolute left-5 text-white text-4xl leading-none hover:text-[#A6896F] transition-colors"
-            >
-              ‹
-            </button>
+            <button onClick={(e) => { e.stopPropagation(); anterior(); }} className="absolute left-5 text-white text-4xl leading-none hover:text-[#A6896F] transition-colors">‹</button>
           )}
-
-          {/* siguiente */}
           {lightbox.imgs.length > 1 && (
-            <button
-              onClick={(e) => { e.stopPropagation(); siguiente(); }}
-              className="absolute right-5 text-white text-4xl leading-none hover:text-[#A6896F] transition-colors"
-            >
-              ›
-            </button>
+            <button onClick={(e) => { e.stopPropagation(); siguiente(); }} className="absolute right-5 text-white text-4xl leading-none hover:text-[#A6896F] transition-colors">›</button>
           )}
-
-          {/* contador */}
-          <p className="absolute bottom-5 text-white/60 text-sm">
-            {lightbox.idx + 1} / {lightbox.imgs.length}
-          </p>
+          <p className="absolute bottom-5 text-white/60 text-sm">{lightbox.idx + 1} / {lightbox.imgs.length}</p>
         </div>
       )}
 
-      {/* ───────── HEADER ───────── */}
-      <header className="sticky top-0 z-40 border-b border-[#E0D6C4] bg-[#F7F3EC]">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <div className="w-24" />
-          <Link href="/">
-            <img
-              src="/productos/logo/Caasabianca.jpeg"
-              alt="Casabianca"
-              className="h-25 w-auto mix-blend-multiply"
-            />
-          </Link>
-          <a
-            href="https://wa.me/541141952834"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-full border border-[#2E2A24] px-5 py-2 text-sm tracking-wide transition-all hover:bg-[#2E2A24] hover:text-[#F7F3EC]"
-          >
-            Escribinos
-          </a>
-        </div>
-      </header>
+      {/* HEADER */}
+      <Header variant="centered" />
 
-      {/* ───────── HERO ───────── */}
-      <section className="border-b border-[#E0D6C4] bg-[#EFE8DB] px-6 py-16 text-center">
+      {/* HERO */}
+      <section className="px-6 py-16 text-center" style={{ borderBottom: "1px solid var(--border-color)", background: "var(--surface)" }}>
         <p className="text-xs uppercase tracking-[0.4em] text-[#A6896F]">Catálogo completo</p>
         <h1 className="mt-3 font-display text-5xl md:text-6xl">Todos los productos</h1>
-        <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-[#5a5247]">
+        <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed" style={{ color: "var(--muted)" }}>
           Explorá cada categoría y encontrá el detalle perfecto para tu hogar.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-2">
           {CATEGORIAS.map((c) => (
-            <a
-              key={c.slug}
-              href={`#${c.slug}`}
-              className="rounded-full border border-[#D8CCB6] px-4 py-1.5 text-sm text-[#5a5247] transition-colors hover:border-[#A6896F] hover:text-[#A6896F]"
-            >
+            <a key={c.slug} href={`#${c.slug}`}
+              className="rounded-full px-4 py-1.5 text-sm transition-colors hover:text-[#A6896F]"
+              style={{ border: "1px solid var(--border-color)", color: "var(--muted)" }}>
               {c.nombre}
             </a>
           ))}
         </div>
       </section>
 
-      {/* ───────── CATEGORÍAS ───────── */}
+      {/* CATEGORÍAS */}
       <div className="mx-auto max-w-6xl px-6 py-20 space-y-24">
         {CATEGORIAS.map((cat) => (
           <section key={cat.slug} id={cat.slug}>
-            <div className="mb-10 border-b border-[#E0D6C4] pb-4">
+            <div className="mb-10 pb-4" style={{ borderBottom: "1px solid var(--border-color)" }}>
               <p className="text-xs uppercase tracking-[0.4em] text-[#A6896F]">Categoría</p>
               <h2 className="mt-2 font-display text-3xl md:text-4xl">{cat.nombre}</h2>
             </div>
@@ -344,20 +290,15 @@ export default function ProductosPage() {
                 <div key={prod.nombre}>
                   <div className="mb-5">
                     <h3 className="font-display text-2xl">{prod.nombre}</h3>
-                    <p className="mt-1 text-sm text-[#5a5247]">{prod.detalle}</p>
+                    <p className="mt-1 text-sm" style={{ color: "var(--muted)" }}>{prod.detalle}</p>
                   </div>
                   <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
                     {prod.imgs.map((img, idx) => (
-                      <button
-                        key={idx}
-                        onClick={() => abrirLightbox(prod.imgs, idx)}
-                        className="group overflow-hidden rounded-2xl border border-[#E0D6C4] bg-[#EBE3D5] cursor-zoom-in"
-                      >
-                        <img
-                          src={img}
-                          alt={`${prod.nombre} ${idx + 1}`}
-                          className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                        />
+                      <button key={idx} onClick={() => abrirLightbox(prod.imgs, idx)}
+                        className="group overflow-hidden rounded-2xl cursor-zoom-in"
+                        style={{ border: "1px solid var(--border-color)", background: "var(--surface-2)" }}>
+                        <img src={img} alt={`${prod.nombre} ${idx + 1}`}
+                          className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />
                       </button>
                     ))}
                   </div>
@@ -368,36 +309,26 @@ export default function ProductosPage() {
         ))}
       </div>
 
-      {/* ───────── CTA ───────── */}
-      <section className="border-t border-[#E0D6C4] bg-[#EFE8DB] px-6 py-20 text-center">
+      {/* CTA */}
+      <section className="px-6 py-20 text-center" style={{ borderTop: "1px solid var(--border-color)", background: "var(--surface)" }}>
         <h2 className="font-display text-3xl md:text-4xl">¿Querés saber más sobre algún producto?</h2>
-        <p className="mx-auto mt-4 max-w-md text-lg text-[#5a5247]">
-          Escribinos y te asesoramos.
-        </p>
+        <p className="mx-auto mt-4 max-w-md text-lg" style={{ color: "var(--muted)" }}>Escribinos y te asesoramos.</p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <a
-            href="https://wa.me/541141952834"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-full bg-[#2E2A24] px-8 py-3 text-[#F7F3EC] transition-transform hover:-translate-y-0.5"
-          >
+          <a href="https://wa.me/541141952834" target="_blank" rel="noreferrer"
+            className="rounded-full bg-[#2E2A24] px-8 py-3 text-[#F7F3EC] transition-transform hover:-translate-y-0.5">
             Escribinos por WhatsApp
           </a>
-          <Link
-            href="/"
-            className="rounded-full border border-[#A6896F] px-8 py-3 text-[#A6896F] transition-colors hover:bg-[#A6896F] hover:text-[#F7F3EC]"
-          >
+          <Link href="/" className="rounded-full border border-[#A6896F] px-8 py-3 text-[#A6896F] transition-colors hover:bg-[#A6896F] hover:text-[#F7F3EC]">
             Volver al inicio
           </Link>
         </div>
       </section>
 
-      {/* ───────── FOOTER ───────── */}
+      {/* FOOTER */}
       <footer className="bg-[#2E2A24] py-10 text-center text-[#cabfae]">
         <p className="font-display text-2xl uppercase tracking-[0.18em] text-[#F7F3EC]">Casabianca</p>
         <p className="mt-2 text-sm">Don Torcuato · Blanqueria & Accesorios</p>
       </footer>
-
     </main>
   );
 }
