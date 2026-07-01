@@ -163,7 +163,7 @@ export default function CasabiancaLanding() {
         <div className="mx-auto max-w-4xl px-6 pt-12 pb-28 text-center md:pt-16 md:pb-36">
           <img src="/productos/logo/Caasabianca.jpeg" alt="Casabianca" className="mx-auto mb-8 h-32 w-auto mix-blend-multiply" />
           <p className="mb-6 text-xs uppercase tracking-[0.4em] text-[#A6896F]">Don Torcuato · Blanqueria & Accesorios</p>
-          <h1 className="font-display text-5xl leading-[1.05] md:text-5xl">
+          <h1 className="font-display text-3xl leading-[1.1] md:text-5xl">
             TRANSFORMAMOS TU CASA<br />EN EL HOGAR QUE SOÑÁS
           </h1>
           <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed" style={{ color: "var(--muted)" }}>
