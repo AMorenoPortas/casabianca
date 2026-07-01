@@ -6,7 +6,7 @@ import Header from "../components/Header";
 
 const CATEGORIAS = [
   {
-    nombre: "Sábanas King",
+    nombre: "SÁBANAS KING",
     slug: "sabanas-king",
     productos: [
       { nombre: "Sábanas King · 300 hilos 100% Algodón Premium Espalma", detalle: "Percal suave y respirable", imgs: ["/productos/sabana-king-300h/Screenshot_20260604_101618_WhatsApp.jpg","/productos/sabana-king-300h/Screenshot_20260604_101642_WhatsApp.jpg","/productos/sabana-king-300h/Screenshot_20260604_101655_WhatsApp.jpg"] },
@@ -14,21 +14,21 @@ const CATEGORIAS = [
     ],
   },
   {
-    nombre: "Almohadas de Pluma",
+    nombre: "ALMOHADAS DE PLUMA",
     slug: "almohadas",
     productos: [
-      { nombre: "Almohadas de Pluma", detalle: "Suavidad y soporte natural", imgs: ["/productos/almohadas-pluma/Screenshot_20260604_102242_WhatsApp.jpg","/productos/almohadas-pluma/Screenshot_20260604_102255_WhatsApp.jpg","/productos/almohadas-pluma/Screenshot_20260604_102303_WhatsApp.jpg"] },
+      { nombre: "", detalle: "Suavidad y soporte natural", imgs: ["/productos/almohadas-pluma/Screenshot_20260604_102242_WhatsApp.jpg","/productos/almohadas-pluma/Screenshot_20260604_102255_WhatsApp.jpg","/productos/almohadas-pluma/Screenshot_20260604_102303_WhatsApp.jpg"] },
     ],
   },
   {
-    nombre: "Batas",
+    nombre: "BATAS",
     slug: "batas",
     productos: [
       { nombre: "Batas unisex · 100% algodón peinado de 300gr Urban Espalma", detalle: "Confort y elegancia para el hogar", imgs: ["/productos/batas/Screenshot_20260612_132726_WhatsApp.jpg","/productos/batas/Screenshot_20260612_132734_WhatsApp.jpg","/productos/batas/Screenshot_20260612_132742_WhatsApp.jpg","/productos/batas/Screenshot_20260612_132752_WhatsApp.jpg","/productos/batas/Screenshot_20260612_132800_WhatsApp.jpg","/productos/batas/Screenshot_20260612_132807_WhatsApp.jpg"] },
     ],
   },
   {
-    nombre: "Juegos de Toallas & Toallón",
+    nombre: "JUEGOS DE TOALLAS & TOALLÓN",
     slug: "juegos-toalla",
     productos: [
       { nombre: "Juego de toallas · 600gr 100% Algodón Edy Arcoiris", detalle: "600 gramos de puro algodón", imgs: ["/productos/juegos-toalla-toallon/toallas-600gr-algodon-arcoiris/Screenshot_20260616_161209_WhatsApp.jpg","/productos/juegos-toalla-toallon/toallas-600gr-algodon-arcoiris/Screenshot_20260616_161219_WhatsApp.jpg","/productos/juegos-toalla-toallon/toallas-600gr-algodon-arcoiris/Screenshot_20260616_161226_WhatsApp.jpg","/productos/juegos-toalla-toallon/toallas-600gr-algodon-arcoiris/Screenshot_20260616_161234_WhatsApp.jpg","/productos/juegos-toalla-toallon/toallas-600gr-algodon-arcoiris/Screenshot_20260616_161242_WhatsApp.jpg","/productos/juegos-toalla-toallon/toallas-600gr-algodon-arcoiris/Screenshot_20260616_161249_WhatsApp.jpg"] },
@@ -36,7 +36,7 @@ const CATEGORIAS = [
     ],
   },
   {
-    nombre: "Toallas de Cocina",
+    nombre: "TOALLAS DE COCINA",
     slug: "toallas-cocina",
     productos: [
       { nombre: "Toalla de cocina · pack x2 50x70 cm 100% algodón Espalma", detalle: "Algodón absorbente para la cocina", imgs: ["/productos/toallas-cocina/pack-x2-50x70/Screenshot_20260612_131503_WhatsApp.jpg","/productos/toallas-cocina/pack-x2-50x70/Screenshot_20260612_131510_WhatsApp.jpg","/productos/toallas-cocina/pack-x2-50x70/Screenshot_20260612_131517_WhatsApp.jpg","/productos/toallas-cocina/pack-x2-50x70/Screenshot_20260612_131529_WhatsApp.jpg","/productos/toallas-cocina/pack-x2-50x70/Screenshot_20260612_131535_WhatsApp.jpg","/productos/toallas-cocina/pack-x2-50x70/Screenshot_20260612_131541_WhatsApp.jpg","/productos/toallas-cocina/pack-x2-50x70/Screenshot_20260612_131548_WhatsApp.jpg","/productos/toallas-cocina/pack-x2-50x70/Screenshot_20260612_131554_WhatsApp.jpg","/productos/toallas-cocina/pack-x2-50x70/Screenshot_20260612_131601_WhatsApp.jpg"] },
@@ -44,7 +44,7 @@ const CATEGORIAS = [
     ],
   },
   {
-    nombre: "Toallas de Playa",
+    nombre: "TOALLAS DE PLAYA",
     slug: "toallas-playa",
     productos: [
       { nombre: "Toalla de Playa · 150x180 cm 500gr Náutical Arcoiris", detalle: "Grande, suave y de secado rápido", imgs: ["/productos/toallas-playa/150x180/Screenshot_20260616_103022_WhatsApp.jpg","/productos/toallas-playa/150x180/Screenshot_20260616_103033_WhatsApp.jpg","/productos/toallas-playa/150x180/Screenshot_20260616_103058_WhatsApp.jpg","/productos/toallas-playa/150x180/Screenshot_20260616_103105_WhatsApp.jpg"] },
@@ -53,7 +53,7 @@ const CATEGORIAS = [
     ],
   },
   {
-    nombre: "Accesorios de Hogar",
+    nombre: "ACCESORIOS PARA EL HOGAR",
     slug: "accesorios",
     productos: [
       { nombre: "Alfombra Kitchen · 150×50 cm", detalle: "Diseño moderno para tu cocina", imgs: ["/productos/accesorios-hogar/alfombra-kitchen-150.50/Screenshot_20260616_162352_WhatsApp.jpg","/productos/accesorios-hogar/alfombra-kitchen-150.50/Screenshot_20260616_162359_WhatsApp.jpg","/productos/accesorios-hogar/alfombra-kitchen-150.50/Screenshot_20260616_162406_WhatsApp.jpg","/productos/accesorios-hogar/alfombra-kitchen-150.50/Screenshot_20260616_162412_WhatsApp.jpg","/productos/accesorios-hogar/alfombra-kitchen-150.50/Screenshot_20260616_162419_WhatsApp.jpg"] },
@@ -61,17 +61,17 @@ const CATEGORIAS = [
     ],
   },
   {
-    nombre: "Diseño de Interiores",
+    nombre: "DISEÑO DE INTERIORES",
     slug: "diseno-interiores",
     productos: [
-      { nombre: "Diseño de Interiores", detalle: "Piezas que transforman cada ambiente", imgs: ["/productos/diseno-interiores/IMG-20260610-WA0080.jpg","/productos/diseno-interiores/IMG-20260610-WA0081.jpg","/productos/diseno-interiores/IMG-20260610-WA0082.jpg","/productos/diseno-interiores/IMG-20260610-WA0083.jpg","/productos/diseno-interiores/IMG-20260610-WA0084.jpg","/productos/diseno-interiores/IMG-20260610-WA0085.jpg","/productos/diseno-interiores/IMG-20260610-WA0086.jpg"] },
+      { nombre: "", detalle: "Piezas que transforman cada ambiente", imgs: ["/productos/diseno-interiores/IMG-20260610-WA0080.jpg","/productos/diseno-interiores/IMG-20260610-WA0081.jpg","/productos/diseno-interiores/IMG-20260610-WA0082.jpg","/productos/diseno-interiores/IMG-20260610-WA0083.jpg","/productos/diseno-interiores/IMG-20260610-WA0084.jpg","/productos/diseno-interiores/IMG-20260610-WA0085.jpg","/productos/diseno-interiores/IMG-20260610-WA0086.jpg"] },
     ],
   },
   {
-    nombre: "Home Deco",
+    nombre: "HOME DECO",
     slug: "home-deco",
     productos: [
-      { nombre: "Home Deco", detalle: "Detalles que cambian la energía del espacio", imgs: ["/productos/home-deco/IMG-20260520-WA0029.jpg","/productos/home-deco/IMG-20260520-WA0030.jpg","/productos/home-deco/IMG-20260520-WA0031.jpg","/productos/home-deco/IMG-20260520-WA0033.jpg"] },
+      { nombre: "", detalle: "Detalles que cambian la energía del espacio", imgs: ["/productos/home-deco/IMG-20260520-WA0029.jpg","/productos/home-deco/IMG-20260520-WA0030.jpg","/productos/home-deco/IMG-20260520-WA0031.jpg","/productos/home-deco/IMG-20260520-WA0033.jpg"] },
     ],
   },
 ];
@@ -101,7 +101,7 @@ export default function ProductosPage() {
 
       <section className="px-6 py-16 text-center" style={{ borderBottom: "1px solid var(--border-color)", background: "var(--surface)" }}>
         <p className="text-xs uppercase tracking-[0.4em] text-[#A6896F]">Catálogo completo</p>
-        <h1 className="mt-3 font-display text-5xl md:text-6xl">Todos los productos</h1>
+        <h1 className="mt-3 font-display text-5xl md:text-5xl">TODOS LOS PRODUCTOS</h1>
         <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed" style={{ color: "var(--muted)" }}>Explorá cada categoría y encontrá el detalle perfecto para tu hogar.</p>
         <div className="mt-8 flex flex-wrap justify-center gap-2">
           {CATEGORIAS.map((c) => (
@@ -139,7 +139,7 @@ export default function ProductosPage() {
       </div>
 
       <section className="px-6 py-20 text-center" style={{ borderTop: "1px solid var(--border-color)", background: "var(--surface)" }}>
-        <h2 className="font-display text-3xl md:text-4xl">¿Querés saber más sobre algún producto?</h2>
+        <h2 className="font-display text-3xl md:text-4xl">¿QUERÉS SABER MÁS SOBRE ALGÚN PRODUCTO?</h2>
         <p className="mx-auto mt-4 max-w-md text-lg" style={{ color: "var(--muted)" }}>Escribinos y te asesoramos.</p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a href="https://wa.me/541141952834" target="_blank" rel="noreferrer" className="rounded-full bg-[#2E2A24] px-8 py-3 text-[#F7F3EC] transition-transform hover:-translate-y-0.5">Escribinos por WhatsApp</a>

@@ -163,8 +163,8 @@ export default function CasabiancaLanding() {
         <div className="mx-auto max-w-4xl px-6 pt-12 pb-28 text-center md:pt-16 md:pb-36">
           <img src="/productos/logo/Caasabianca.jpeg" alt="Casabianca" className="mx-auto mb-8 h-32 w-auto mix-blend-multiply" />
           <p className="mb-6 text-xs uppercase tracking-[0.4em] text-[#A6896F]">Don Torcuato · Blanqueria & Accesorios</p>
-          <h1 className="font-display text-5xl leading-[1.05] md:text-7xl">
-            Transformamos tu casa<br />en el hogar que soñás
+          <h1 className="font-display text-5xl leading-[1.05] md:text-5xl">
+            TRANSFORMAMOS TU CASA<br />EN EL HOGAR QUE SOÑÁS
           </h1>
           <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed" style={{ color: "var(--muted)" }}>
             Desde un juego de sábanas hasta un artículo de diseño tenemos el detalle perfecto para renovar tu energía y tu hogar.
@@ -184,7 +184,7 @@ export default function CasabiancaLanding() {
       {/* ───────── NOSOTROS ───────── */}
       <section id="nosotros" style={{ borderTop: "1px solid var(--border-color)", borderBottom: "1px solid var(--border-color)", background: "var(--surface)" }}>
         <div className="mx-auto max-w-6xl px-6 py-24">
-          <h2 className="font-display text-4xl md:text-5xl">¿Y si lo pensamos junt@s?</h2>
+          <h2 className="font-display text-4xl md:text-4xl">¿Y SI LO PENSAMOS JUNT@S?</h2>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed" style={{ color: "var(--muted)" }}>
             Mi objetivo es que te sientas acompañada en cada decisión. Cuando elegís Casabianca, te llevás mi mirada proactiva y mi asesoramiento sincero.
           </p>
@@ -207,7 +207,7 @@ export default function CasabiancaLanding() {
       {/* ───────── PRODUCTOS DESTACADOS ───────── */}
       <section id="productos" className="mx-auto max-w-6xl px-6 py-24">
         <p className="text-xs uppercase tracking-[0.4em] text-[#A6896F]">Selección</p>
-        <h2 className="mt-3 font-display text-4xl md:text-5xl">Productos destacados</h2>
+        <h2 className="mt-3 font-display text-4xl md:text-4xl">PRODUCTOS DESTACADOS</h2>
         <div className="mt-12 flex justify-center">
           <Button href="/productos" variant="primary">Ver todos los productos →</Button>
         </div>
@@ -228,13 +228,13 @@ export default function CasabiancaLanding() {
       <section id="diseno" style={{ borderTop: "1px solid var(--border-color)", borderBottom: "1px solid var(--border-color)", background: "var(--surface)" }}>
         <div className="mx-auto max-w-6xl px-6 py-24">
           <p className="text-xs uppercase tracking-[0.4em] text-[#A6896F]">Servicios</p>
-          <h2 className="mt-3 font-display text-4xl md:text-5xl">Diseño de interiores</h2>
+          <h2 className="mt-3 font-display text-4xl md:text-4xl">DISEÑO DE INTERIORES</h2>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed" style={{ color: "var(--muted)" }}>
             Más allá de los productos, te acompañamos en la transformación de tus espacios. Desde la confección a medida hasta el asesoramiento profesional, cada detalle cuenta.
           </p>
 
           <div className="mt-16">
-            <h3 className="font-display text-2xl md:text-3xl">Confección a medida</h3>
+            <h3 className="font-display text-2xl md:text-3xl">CONFECCIÓN A MEDIDA</h3>
             <p className="mt-3 max-w-xl text-base leading-relaxed" style={{ color: "var(--muted)" }}>
               Cortinas, almohadones, cubrecamas y más, diseñados exactamente para tu espacio. Elegís la tela, nosotros le damos forma.
             </p>
@@ -248,7 +248,7 @@ export default function CasabiancaLanding() {
           </div>
 
           <div className="mt-16">
-            <h3 className="font-display text-2xl md:text-3xl">Asesoramiento profesional</h3>
+            <h3 className="font-display text-2xl md:text-3xl">ASESORAMIENTO PROFESIONAL</h3>
             <div className="mt-8 overflow-hidden rounded-2xl" style={{ border: "1px solid var(--border-color)", background: "var(--background)" }}>
               <div className="p-8 md:p-14">
                 <div className="flex items-center gap-4">
@@ -272,7 +272,7 @@ export default function CasabiancaLanding() {
       <section id="faq" style={{ borderBottom: "1px solid var(--border-color)", background: "var(--background)" }}>
         <div className="mx-auto max-w-5xl px-6 py-24">
           <p className="text-xs uppercase tracking-[0.4em] text-[#A6896F]">Guía de consulta</p>
-          <h2 className="mt-3 font-display text-4xl md:text-5xl">Elegí con conocimiento, diseñá con libertad</h2>
+          <h2 className="mt-3 font-display text-4xl md:text-4xl">ELEGÍ CON CONOCIMIENTO, DISEÑÁ CON LIBERTAD</h2>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed" style={{ color: "var(--muted)" }}>
             Vestir tu hogar es una decisión personal y, a veces, técnica. Por eso armé este espacio de consulta rápida: mi guía sobre la calidad de los hilados, tips para combinar texturas y una tabla de medidas exacta para que tus sábanas y acolchados queden impecables.
           </p>
@@ -314,7 +314,7 @@ export default function CasabiancaLanding() {
       {/* ───────── MEDIDAS ───────── */}
       <section id="medidas" className="mx-auto max-w-4xl px-6 py-24">
         <p className="text-xs uppercase tracking-[0.4em] text-[#A6896F]">Guía de medidas</p>
-        <h2 className="mt-3 font-display text-4xl md:text-5xl">El calce perfecto</h2>
+        <h2 className="mt-3 font-display text-4xl md:text-4xl">EL CALCE PERFECTO</h2>
         <p className="mt-5 text-lg leading-relaxed" style={{ color: "var(--muted)" }}>Evitá errores comunes midiendo tu colchón antes de elegir. Encontrá tu talle:</p>
         <div className="mt-10 overflow-hidden rounded-2xl" style={{ border: "1px solid var(--border-color)" }}>
           <table className="w-full text-left text-sm md:text-base">
@@ -343,7 +343,7 @@ export default function CasabiancaLanding() {
       <section id="test" className="border-y border-[#E0D6C4] bg-[#2E2A24] text-[#F7F3EC]">
         <div className="mx-auto max-w-3xl px-6 py-24">
           <p className="text-center text-xs uppercase tracking-[0.4em] text-[#A6896F]">Test de estilo</p>
-          <h2 className="mt-3 text-center font-display text-4xl md:text-5xl">¿Cuál es tu esencia Casabianca?</h2>
+          <h2 className="mt-3 text-center font-display text-4xl md:text-4xl">¿CUÁL ES TU ESENCIA CASABIANCA?</h2>
           <p className="mt-5 text-center text-lg text-[#cabfae]">Respondé estas 3 preguntas y descubrí tu set ideal.</p>
           {!resultado ? (
             <div className="mt-14 space-y-10">
@@ -382,7 +382,7 @@ export default function CasabiancaLanding() {
       {/* ───────── CUIDADOS ───────── */}
       <section className="mx-auto max-w-5xl px-6 py-24">
         <p className="text-xs uppercase tracking-[0.4em] text-[#A6896F]">Manual de cuidados</p>
-        <h2 className="mt-3 font-display text-4xl md:text-5xl">Calidad para siempre</h2>
+        <h2 className="mt-3 font-display text-4xl md:text-4xl">CALIDAD PARA SIEMPRE</h2>
         <div className="mt-12 grid gap-6 grid-cols-2 lg:grid-cols-4">
           {[
             { t: "Lavado", d: "Agua fría o tibia (máx. 30 °C). El agua muy caliente debilita las fibras de algodón." },
@@ -402,7 +402,7 @@ export default function CasabiancaLanding() {
       <section id="contacto" style={{ borderTop: "1px solid var(--border-color)", background: "var(--surface)" }}>
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-24 md:grid-cols-2">
           <div>
-            <h2 className="font-display text-4xl md:text-5xl">Vení a conocernos</h2>
+            <h2 className="font-display text-4xl md:text-4xl">VENÍ A CONOCERNOS</h2>
             <p className="mt-5 max-w-md text-lg leading-relaxed" style={{ color: "var(--muted)" }}>
               Estoy para escucharte, conocer tu estilo y proponerte opciones que transformen tu dormitorio, tu baño o tu mesa en espacios de revista, con la calidez de un hogar real.
             </p>

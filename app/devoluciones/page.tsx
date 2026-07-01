@@ -3,7 +3,7 @@ import Header from "../components/Header";
 
 const SECCIONES = [
   {
-    titulo: "Motivos válidos para cambios y devoluciones",
+    titulo: "MOTIVOS VÁLIDOS PARA CAMBIOS Y DEVOLUCIONES",
     items: [
       "Producto defectuoso.",
       "Producto llegó roto o con desperfectos.",
@@ -12,7 +12,7 @@ const SECCIONES = [
     ],
   },
   {
-    titulo: "Casos no contemplados",
+    titulo: "CASOS NO CONTEMPLADOS",
     items: [
       "Productos usados.",
       "Productos sin alguno de sus accesorios, piezas o envoltorio original.",
@@ -22,7 +22,7 @@ const SECCIONES = [
     nota: "Si el producto de devolución llega usado, pisado o manchado, será reenviado al cliente y el costo de ese envío correrá por su cuenta.",
   },
   {
-    titulo: "Consideraciones generales",
+    titulo: "CONSIDERACIONES GENERALES",
     items: [
       "Los cambios están sujetos a disponibilidad de stock.",
       "Para solicitudes de cambio o devolución por responsabilidad del cliente, el costo de retiro será abonado por el usuario.",
@@ -37,7 +37,7 @@ export default function DevolucionesPage() {
 
       <section className="px-6 py-16 text-center" style={{ borderBottom: "1px solid var(--border-color)", background: "var(--surface)" }}>
         <p className="text-xs uppercase tracking-[0.4em] text-[#A6896F]">Información importante</p>
-        <h1 className="mt-3 font-display text-5xl md:text-6xl">Política de Devoluciones y Cambios</h1>
+        <h1 className="mt-3 font-display text-5xl md:text-5xl">POLÍTICA DE DEVOLUCIONES Y CAMBIOS</h1>
         <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed" style={{ color: "var(--muted)" }}>
           Queremos que estés feliz con tu compra. Si algo no salió como esperabas, estamos para ayudarte.
         </p>
@@ -75,7 +75,7 @@ export default function DevolucionesPage() {
 
         <section>
           <div className="mb-6 pb-3" style={{ borderBottom: "1px solid var(--border-color)" }}>
-            <h2 className="font-display text-2xl md:text-3xl">¿Cómo gestionar un cambio o devolución?</h2>
+            <h2 className="font-display text-2xl md:text-3xl">¿CÓMO GESTIONAR UN CAMBIO O DEVOLUCIÓN?</h2>
           </div>
           <div className="rounded-2xl p-6" style={{ border: "1px solid var(--border-color)", background: "var(--surface)" }}>
             <p className="text-xs uppercase tracking-[0.3em] text-[#A6896F]">Pasados los 15 días</p>
@@ -92,7 +92,7 @@ export default function DevolucionesPage() {
 
         <section className="rounded-2xl bg-[#2E2A24] p-10 text-center text-[#F7F3EC]">
           <p className="text-xs uppercase tracking-[0.4em] text-[#A6896F]">¿Tenés dudas?</p>
-          <h2 className="mt-3 font-display text-3xl">Estamos para ayudarte</h2>
+          <h2 className="mt-3 font-display text-3xl">ESTAMOS PARA AYUDARTE</h2>
           <p className="mx-auto mt-4 max-w-md text-[#cabfae]">Contactanos por WhatsApp o visitanos en el local. Te asesoramos sin compromiso.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a href="https://wa.me/541141952834" target="_blank" rel="noreferrer"
